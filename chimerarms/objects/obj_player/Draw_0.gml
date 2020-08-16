@@ -1,3 +1,7 @@
+// face last moved direction; CANNOT ACCOUNT FOR 0!
+if(hspeed > 0){image_xscale = 2;}
+if(hspeed < 0){image_xscale = -2;}
+
 // flash if invincible
 if(invincible){image_speed = 1;}
 else{image_speed = 0;}
