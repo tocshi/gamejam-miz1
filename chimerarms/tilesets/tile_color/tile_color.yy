@@ -1,5 +1,5 @@
 {
-    "id": "720630f6-6992-4504-a61e-b91850e62a8f",
+    "id": "e5a306b7-5a0b-4bde-809e-9f37c664b253",
     "modelName": "GMTileSet",
     "mvc": "1.11",
     "name": "tile_color",
@@ -1087,10 +1087,10 @@
     ],
     "tile_animation_speed": 15,
     "tile_count": 1056,
-    "tileheight": 16,
-    "tilehsep": 1,
-    "tilevsep": 1,
-    "tilewidth": 16,
+    "tileheight": 32,
+    "tilehsep": 2,
+    "tilevsep": 2,
+    "tilewidth": 32,
     "tilexoff": 0,
     "tileyoff": 0
 }

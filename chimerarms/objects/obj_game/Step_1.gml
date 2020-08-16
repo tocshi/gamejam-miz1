@@ -1,0 +1,2 @@
+//resolve time
+global.time++;
