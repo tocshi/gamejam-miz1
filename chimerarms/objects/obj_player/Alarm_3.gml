@@ -15,8 +15,9 @@ for(var i = 0; i < ds_list_size(targetlist); ++i){
 		hitleft--;
 		// end line effect here, must check here as well so I can't move it earlier...either that or I'm a dumbass
 		if(hitleft <= 0){
-			xx = targetlist[| i].x;
-			yy = targetlist[| i].y;
+			var dist = distance_to_point(targetlist[| i].x,targetlist[| i].y);
+			xx = x+lengthdir_x(dist,angle);
+			yy = y+lengthdir_y(dist,angle);
 		}
 		// had to do this cuz I made an oversight in how the script functions, oh well
 		var tempatk = atk;
