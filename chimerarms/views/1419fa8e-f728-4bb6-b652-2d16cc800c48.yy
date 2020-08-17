@@ -13,14 +13,10 @@
         "7d84f731-05ff-4958-9f36-c7951b73180b",
         "09674336-d795-427c-a06f-b089115cee9f",
         "89ee28b1-f4be-41a9-8b01-7874e8c2d4e8",
-        "8248017f-64c6-41b1-b687-32979b0b8b38",
-        "beb1e09c-2d4a-424d-9c1b-b0b35c12968c",
-        "548070fa-3a83-4273-b35e-23a8d6c27100",
-        "615fa781-5872-459c-ba72-26a639ba67fd",
-        "940d11db-9be2-4dde-aa31-33f053741d1c"
+        "8248017f-64c6-41b1-b687-32979b0b8b38"
     ],
     "filterType": "GMSprite",
-    "folderName": "Weapons",
+    "folderName": "weapons",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

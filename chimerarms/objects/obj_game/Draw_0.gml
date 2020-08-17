@@ -20,3 +20,5 @@ for(var i = 0; i < 16; ++i){
 	hps -= 4;
 	xx += sprite_get_width(spr_castlehp);
 }
+draw_set_halign(fa_left);
+draw_text(xx+6,yy+sprite_get_height(spr_castlehp)/2,"WAVE " + string(global.wave));

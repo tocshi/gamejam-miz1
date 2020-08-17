@@ -8,12 +8,14 @@ else{canAttack = true;}
 // move and jump
 if(canMove){
 	if(keyboard_check(ord("A")) || keyboard_check(vk_left)){
+		facing = -1;
 		if(hspeed > -1 * movespeed){
 			hspeed -= moveacc;
 			isMoving = true;
 		}
 	}
 	if(keyboard_check(ord("D")) || keyboard_check(vk_right)){
+		facing = 1;
 		if(hspeed < movespeed){
 			hspeed += moveacc;
 			isMoving = true;
@@ -46,31 +48,68 @@ if(canAttack){
 			hitmod = other.hitmod;
 			piercemod = other.piercemod;
 			duration = (room_speed/atkspeed)/3;
-			dir = sign(other.image_xscale);
-			if(dir = 1){image_angle = 100;}
-			else{image_angle = 80;}
+			dir = other.facing;
+			image_angle = 90 + (10 * dir);
 			image_xscale = 1.5*other.rangemod;
 			image_yscale = 1.5*other.rangemod*dir;
 		}
 	}
 	if((mouse_check_button(mb_right) || keyboard_check(ord("X"))) && shotmode > 0){
 		atkTimer = room_speed/atkspeed;
+		with(instance_create_layer(x,y,"Attacks",obj_weapon_atk)){
+			atktype = 1;
+			atk = other.atk;
+			atkspeed = other.atkspeed;
+			hitmod = other.hitmod;
+			piercemod = other.piercemod;
+			rangemod = other.rangemod;
+			duration = room_speed/atkspeed;
+			image_xscale = 1.5*rangemod;
+			image_yscale = 1.5*rangemod;
+		}
 		switch(shotmode){
 			// bow and arrow
 			case 1:
-			
+			with(instance_create_layer(x,y,"Attacks",obj_arrow)){
+				atk = other.atk*0.7;
+				hitmod = other.hitmod;
+				piercemod = other.piercemod;
+				rangemod = other.rangemod;
+				direction = point_direction(x,y,mouse_x,mouse_y);
+				image_angle = direction-45;
+				speed = 15*rangemod;
+			}
 			break;
 			// staff
 			case 2:
-			
+			with(instance_create_layer(x,y,"Attacks",obj_bolt)){
+				atk = other.atk*0.7;
+				hitmod = other.hitmod;
+				piercemod = other.piercemod;
+				range = 256 * other.rangemod;
+				direction = point_direction(x,y,mouse_x,mouse_y);
+				image_angle = direction-45;
+				speed = 5;
+				duration = range/speed;
+			}
 			break;
 			// gun
 			case 3:
-			
+			remaining = 3;
+			alarm[3] = 1;
 			break;
 			// launcher
 			case 4:
-			
+			with(instance_create_layer(x,y,"Attacks",obj_rocket)){
+				atk = other.atk*0.7;
+				hitmod = other.hitmod;
+				piercemod = other.piercemod;
+				range = 1500 * other.rangemod;
+				direction = point_direction(x,y,mouse_x,mouse_y);
+				image_angle = direction-45;
+				speed = 0;
+				duration = range/30;
+			}
 			break;
 		}
 	}
