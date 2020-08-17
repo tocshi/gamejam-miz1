@@ -8,3 +8,4 @@ invincible = true;
 alarm[1] = 90;
 mask_index = sprite_index;
 canMove = true;
+canAttack = true;
