@@ -26,7 +26,7 @@ rangemod = 1;
 hitmod = 2;
 piercemod = 0;
 meleemode = 1;
-shotmode = 4;
+shotmode = 1;
 movespeed = 5;
 moveacc = 0.2;
 
