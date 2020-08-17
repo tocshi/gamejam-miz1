@@ -1,3 +1,6 @@
+// set global spawn
+global.playerspawn = [x,y];
+
 // initial variables
 image_speed = 0;
 image_xscale = 2;
@@ -13,10 +16,11 @@ invincible = false;
 
 // player stats
 hp = 3;
-atk = 0;
+atk = 5; // TEMP
 atkspeed = 1.2;
 rangemod = 1;
 hitmod = 1;
+piercemod = 0;
 meleemode = 1;
 shotmode = 0;
 movespeed = 5;

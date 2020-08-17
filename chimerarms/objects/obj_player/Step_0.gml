@@ -19,7 +19,7 @@ if(canMove){
 			isMoving = true;
 		}
 	}
-	if((keyboard_check(ord("W")) || keyboard_check(vk_space)) && canJump){
+	if((keyboard_check(ord("W")) || keyboard_check(vk_space) || keyboard_check(vk_up)) && canJump){
 		if(alarm[0] <= 0){alarm[0] = 10;}
 		vspeed = -8;
 	}
@@ -41,8 +41,11 @@ if(canAttack){
 	if((mouse_check_button(mb_left) || keyboard_check(ord("Z"))) && meleemode > 0){
 		atkTimer = room_speed/atkspeed;
 		with(instance_create_layer(x,y,"Attacks",obj_weapon_atk)){
+			atk = other.atk;
 			atkspeed = other.atkspeed;
-			duration = (room_speed/atkspeed)/2;
+			hitmod = other.hitmod;
+			piercemod = other.piercemod;
+			duration = (room_speed/atkspeed)/3;
 			dir = sign(other.image_xscale);
 			if(dir = 1){image_angle = 100;}
 			else{image_angle = 80;}
@@ -79,7 +82,7 @@ vspeed += grav;
 // collide with wall
 if(place_meeting(x+hspeed,y,obj_playerwall)){
 	var yplus = 0;
-	while(place_meeting(x+hspeed,y-yplus,obj_playerwall) && yplus <= 3){
+	while(place_meeting(x+hspeed,y-yplus,obj_playerwall) && yplus <= 4){
 		yplus++;
 	}
 	if(place_meeting(x+hspeed,y-yplus,obj_playerwall)){
