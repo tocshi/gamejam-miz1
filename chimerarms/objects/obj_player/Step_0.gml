@@ -33,6 +33,7 @@ if(isMoving){
 		if(hspeed != 0){
 			if(hspeed > 0){ hspeed -= moveacc;}
 			else{hspeed += moveacc;}
+			if(hspeed > -0.1 && hspeed < 0.1){hspeed = 0;}
 		}
 		else{isMoving = false;}
 	}
@@ -149,6 +150,23 @@ if(place_meeting(x,y+1,obj_playerwall)){
 else{
 	onPlatform--;
 	if(onPlatform <= 0){alarm[0] = 1;}
+}
+
+if(keyboard_check_pressed(ord("1"))){
+	global.shotmode = 1;
+	room_restart();
+}
+if(keyboard_check_pressed(ord("2"))){
+	global.shotmode = 2;
+	room_restart();
+}
+if(keyboard_check_pressed(ord("3"))){
+	global.shotmode = 3;
+	room_restart();
+}
+if(keyboard_check_pressed(ord("4"))){
+	global.shotmode = 4;
+	room_restart();
 }
 
 

@@ -20,13 +20,13 @@ remaining = 0;
 
 // player stats
 hp = 3;
-atk = 5; // TEMPd
-atkspeed = 1.2;
-rangemod = 1;
-hitmod = 2;
-piercemod = 0;
+atk = global.player_atkmod;
+atkspeed = global.player_atkspeed;
+rangemod = 1 * global.player_rangemod;
+hitmod = 1 + global.player_hitmod;
+piercemod = global.player_piercemod;
 meleemode = 1;
-shotmode = 4;
+shotmode = global.shotmode;
 movespeed = 5;
 moveacc = 0.2;
 

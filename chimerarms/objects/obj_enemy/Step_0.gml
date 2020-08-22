@@ -4,6 +4,7 @@ if(hp <= 0){
 	expanding = true;
 	hspeed = 0;
 	vspeed = 0;
+	speed = 0;
 	exit;
 }
 

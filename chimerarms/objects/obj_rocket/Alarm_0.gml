@@ -4,6 +4,10 @@
 if(point_distance(x,y,obj_player.x,obj_player.y) < 64){
 	with(obj_player){
 		event_perform(ev_collision,obj_enemy);
+		if(hp > 0){
+			vspeed += -1*min(20,abs(6/lengthdir_y(point_distance(x,y,other.x,other.y),point_direction(x,y,other.x,other.y))));
+			hspeed += 6/lengthdir_x(point_distance(x,y,other.x,other.y),point_direction(x,y,other.x,other.y));
+		}
 	}
 }
 

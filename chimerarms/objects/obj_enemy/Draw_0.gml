@@ -3,10 +3,6 @@
 // change colour based on % hp left
 image_blend = make_color_hsv(0,200-((hp/maxhp)*200),255);
 
-// flash if invincible
-if(invincible){image_speed = 1;}
-else{image_speed = 0;}
-
 // movement effects
 if(isMoving){
 	var angle = 10*sin(global.time/5);

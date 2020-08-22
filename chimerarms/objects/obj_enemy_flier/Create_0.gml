@@ -1,14 +1,18 @@
 event_inherited();
 // enemy stats
-maxhp = 150 * global.enemy_hpmod;
+maxhp = 120 * global.enemy_hpmod;
 hp = maxhp;
-atk = 80 * global.enemy_atkmod;
+atk = 65 * global.enemy_atkmod;
 def = 0 + global.enemy_defmod;
 atkspeed = 1;
 rangemod = global.enemy_rangemod;
 sizemod = global.enemy_sizemod;
 movespeed = 0.8 * global.enemy_speedmod;
 moveacc = 0.05;
-grav = 0.5;
+grav = 0;
 image_index = irandom_range(0,image_number-1);
-image_speed = 0;
+image_speed = 1;
+
+// move destination
+destX = 0;
+destY = room_height/2 + irandom_range(-80,150);
