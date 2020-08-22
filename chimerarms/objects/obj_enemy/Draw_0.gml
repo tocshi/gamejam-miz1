@@ -5,7 +5,7 @@ image_blend = make_color_hsv(0,200-((hp/maxhp)*200),255);
 
 // movement effects
 if(isMoving){
-	var angle = 10*sin(global.time/5);
+	var angle = 10*sin((global.time+time_offset)/5);
 	draw_sprite_ext(sprite_index,-1,x,y,image_xscale,image_yscale,angle,image_blend,image_alpha);
 }
 else{draw_self();}

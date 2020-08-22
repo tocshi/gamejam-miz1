@@ -22,3 +22,16 @@ for(var i = 0; i < 16; ++i){
 }
 draw_set_halign(fa_left);
 draw_text(xx+6,yy+sprite_get_height(spr_castlehp)/2,"WAVE " + string(global.wave));
+
+// draw fade for pause
+if(global.pause){
+	if(pausealpha < 0.7){pausealpha+=0.02}
+}
+else{
+	if(pausealpha > 0){pausealpha-=0.02;}
+}
+draw_set_color(c_black);
+draw_set_alpha(pausealpha);
+draw_rectangle(x,y,room_width,room_height,false);
+draw_set_alpha(1);
+draw_set_color(c_white);

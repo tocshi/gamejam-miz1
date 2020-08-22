@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "018b5918-021a-4cdd-b679-fd0d90682791",
+            "Value": {
+                "id": "a1a16ee7-bc60-47ba-bc08-2fd87296e7a3",
+                "resourcePath": "scripts\\spawn_enemy\\spawn_enemy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0293cce6-b818-4245-af2c-b686942d1d88",
             "Value": {
                 "id": "d561ccf8-5bae-4512-b679-9bee36c23a93",
@@ -67,6 +75,14 @@
             "Value": {
                 "id": "9203226f-99a1-437a-9783-2eed76b61acb",
                 "resourcePath": "sprites\\spr_tile_mono\\spr_tile_mono.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1038b8d1-b61e-4790-b400-693e03d040fd",
+            "Value": {
+                "id": "a8214230-524f-49a3-b9f5-396a3a942134",
+                "resourcePath": "sprites\\spr_enemy_spitter\\spr_enemy_spitter.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -175,6 +191,14 @@
             }
         },
         {
+            "Key": "40562dcc-b700-4fec-b604-d28e727519f1",
+            "Value": {
+                "id": "ad196bf3-54a1-4158-947f-077874b50cf0",
+                "resourcePath": "sprites\\spr_enemy_boulder\\spr_enemy_boulder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "45d72a46-1d58-4560-9735-c95a74517f97",
             "Value": {
                 "id": "dad36d85-7cc0-462d-8804-b407a124be5a",
@@ -228,6 +252,14 @@
                 "id": "f9f2dff8-7ee7-4455-aab4-5a938a7f9db5",
                 "resourcePath": "views\\556445a2-7040-4099-b43a-e5a29f1fab5b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "57059f31-40a6-4a97-9fe2-d4a02759a089",
+            "Value": {
+                "id": "f343f683-f382-44b5-9d35-d4da07633830",
+                "resourcePath": "scripts\\get_weapon_name\\get_weapon_name.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -340,6 +372,14 @@
                 "id": "2e1ab72c-a82b-4ce4-8da4-01802dc15c1d",
                 "resourcePath": "objects\\obj_dmgtxt\\obj_dmgtxt.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "74585198-444d-4274-963a-2363fc1b1f5b",
+            "Value": {
+                "id": "79cf967d-e6df-4801-b4ca-bc26f80cae62",
+                "resourcePath": "sprites\\spr_enemy_caster\\spr_enemy_caster.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -535,6 +575,14 @@
             }
         },
         {
+            "Key": "bc299629-1bc1-44a8-8af9-2c20b2eca223",
+            "Value": {
+                "id": "a09b93ca-a190-40fe-acba-9316a8e4e7ba",
+                "resourcePath": "sprites\\spr_enemy_corrupter\\spr_enemy_corrupter.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "beb1e09c-2d4a-424d-9c1b-b0b35c12968c",
             "Value": {
                 "id": "777be493-7d95-43b6-9168-5748916bba0a",
@@ -571,6 +619,14 @@
             "Value": {
                 "id": "9d1de758-d89a-4838-ba86-18d367b944d9",
                 "resourcePath": "sprites\\spr_enemy_soldier\\spr_enemy_soldier.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cc303543-98da-41bd-8cf1-c6d534a19923",
+            "Value": {
+                "id": "49593b15-efe7-4548-8012-e48d2202e288",
+                "resourcePath": "sprites\\spr_javelin\\spr_javelin.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -695,6 +751,14 @@
             }
         },
         {
+            "Key": "fc3b8480-8047-467e-adea-6d65685be232",
+            "Value": {
+                "id": "f8ccc3bc-db4e-4970-a08b-e910a0a2df5e",
+                "resourcePath": "sprites\\spr_rock\\spr_rock.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "fe5e8b7f-f974-4cd9-b9e9-eedef158dd03",
             "Value": {
                 "id": "b862834c-0a5f-4326-8a07-d15efbb89b45",
@@ -706,7 +770,9 @@
     "script_order": [
         "cb6c59f0-b724-47b0-8c21-ba37f291502c",
         "9f7deeca-48bd-4c20-9a7d-c8e0491f3e47",
-        "588940fd-99a9-4d42-a3cd-2a3c5796eba7"
+        "588940fd-99a9-4d42-a3cd-2a3c5796eba7",
+        "018b5918-021a-4cdd-b679-fd0d90682791",
+        "57059f31-40a6-4a97-9fe2-d4a02759a089"
     ],
     "tutorial": ""
 }

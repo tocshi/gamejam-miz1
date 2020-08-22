@@ -1,5 +1,5 @@
 var target = argument0
-var dmg = max(1,atk-(target.def*max(0,piercemod)));
+var dmg = max(1,atk*(100-((target.def*max(0,piercemod)))/100));
 target.hp -= dmg;
 
 with(instance_create_layer(irandom_range(target.x-10,target.x+10), 

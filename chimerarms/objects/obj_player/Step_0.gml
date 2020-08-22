@@ -40,7 +40,7 @@ if(isMoving){
 }
 
 // attack
-if(canAttack){
+if(canAttack && !global.pause){
 	if((mouse_check_button(mb_left) || keyboard_check(ord("Z"))) && meleemode > 0){
 		atkTimer = room_speed/atkspeed;
 		with(instance_create_layer(x,y,"Attacks",obj_weapon_atk)){

@@ -9,6 +9,8 @@ atkTimer = 0;
 invincible = false;
 fading = false;
 expanding = false;
+// for variation in movement
+time_offset = irandom(30);
 
 // enemy stats (these are reinitialized upon instance creation)
 hp = 1;

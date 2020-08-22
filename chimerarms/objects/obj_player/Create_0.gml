@@ -20,7 +20,7 @@ remaining = 0;
 
 // player stats
 hp = 3;
-atk = global.player_atkmod;
+atk = 40 * global.player_atkmod;
 atkspeed = global.player_atkspeed;
 rangemod = 1 * global.player_rangemod;
 hitmod = 1 + global.player_hitmod;

@@ -3,7 +3,7 @@ event_inherited();
 maxhp = 60 * global.enemy_hpmod;
 hp = maxhp;
 atk = 35 * global.enemy_atkmod;
-def = 0 + global.enemy_defmod;
+def = 7 * global.enemy_defmod;
 atkspeed = 1;
 rangemod = global.enemy_rangemod;
 sizemod = global.enemy_sizemod;
