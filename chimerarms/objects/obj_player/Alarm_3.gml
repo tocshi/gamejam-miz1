@@ -2,8 +2,8 @@
 if(remaining <= 0){exit;}
 var targetlist = ds_list_create();
 var angle = point_direction(x,y,mouse_x,mouse_y)+random_range(-3,3);
-var xx = x+lengthdir_x(320,angle);
-var yy = y+lengthdir_y(320,angle);
+var xx = x+lengthdir_x(320*rangemod,angle);
+var yy = y+lengthdir_y(320*rangemod,angle);
 var hitleft = hitmod;
 // note: this is my first time making a hitscan, don't judge
 collision_line_list(x,y,xx,yy,obj_enemy,true,true,targetlist,true);

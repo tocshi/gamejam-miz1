@@ -143,11 +143,27 @@
             }
         },
         {
+            "Key": "1f94e360-5da7-4a7d-a690-69f49051062d",
+            "Value": {
+                "id": "6263430a-9e39-4868-8f07-8d49090ef385",
+                "resourcePath": "scripts\\random_ranged\\random_ranged.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "20debc0a-5d6b-4e58-9ece-e000168d4dfc",
             "Value": {
                 "id": "60a8f087-690c-4164-b109-7cda982fb51f",
                 "resourcePath": "objects\\obj_enemy_flier\\obj_enemy_flier.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "256f04de-5769-49f0-ba1b-1d655e5f8110",
+            "Value": {
+                "id": "aee32141-5d64-4034-8d27-f0678c5a86c9",
+                "resourcePath": "sprites\\spr_exclamation\\spr_exclamation.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -311,6 +327,14 @@
             }
         },
         {
+            "Key": "5ed8ad27-c2fe-4a73-80f3-728c527b7abd",
+            "Value": {
+                "id": "1bec9f79-a119-4ccf-bcf1-af85e08153b2",
+                "resourcePath": "sprites\\spr_flaming\\spr_flaming.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "64c4f6b8-cda8-4708-b469-94011a74e364",
             "Value": {
                 "id": "1a7f0eec-a876-4512-bf2f-942870f2da3d",
@@ -356,6 +380,14 @@
                 "id": "90a041f9-e033-4f21-b0ad-3d62c5a2d3c5",
                 "resourcePath": "sprites\\spr_playerhp\\spr_playerhp.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "726ab41e-d394-4f48-a75f-7b853a9961f0",
+            "Value": {
+                "id": "daa7437e-8385-4407-865b-0737b318aea4",
+                "resourcePath": "objects\\obj_weapon_button\\obj_weapon_button.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -487,6 +519,14 @@
             }
         },
         {
+            "Key": "87af0490-91ac-48b0-b4bf-b582a06e0f90",
+            "Value": {
+                "id": "a61b1a6b-aa63-4401-8ad3-00e6a6aa2a51",
+                "resourcePath": "scripts\\random_melee\\random_melee.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "88af7e22-bce2-4ae3-b20f-a1da470e3c56",
             "Value": {
                 "id": "59bfe710-9365-44d8-88eb-2ca1f9ee8929",
@@ -500,6 +540,14 @@
                 "id": "5cf2ac78-f119-465c-8f09-c7334fe38eaa",
                 "resourcePath": "sprites\\spr_gun\\spr_gun.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "8cbb0884-283a-4862-aa2f-8465be9a3a9e",
+            "Value": {
+                "id": "a1802a7d-3e45-4c5f-91b8-a89c0bff6b66",
+                "resourcePath": "objects\\obj_menu_button\\obj_menu_button.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -547,6 +595,14 @@
             "Value": {
                 "id": "7422bea3-5c28-4a96-ba31-b800a526c8a2",
                 "resourcePath": "scripts\\draw_text_outlined_transformed\\draw_text_outlined_transformed.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a3f4addc-57c2-49c8-b9b2-f9f0a9f0b99f",
+            "Value": {
+                "id": "9e039ce9-505f-4248-be3a-3b11bebbd8e4",
+                "resourcePath": "scripts\\create_weapon_sprite\\create_weapon_sprite.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -797,7 +853,10 @@
         "588940fd-99a9-4d42-a3cd-2a3c5796eba7",
         "018b5918-021a-4cdd-b679-fd0d90682791",
         "57059f31-40a6-4a97-9fe2-d4a02759a089",
-        "7a0e3c43-004e-4c95-83cf-03da72a91b9e"
+        "7a0e3c43-004e-4c95-83cf-03da72a91b9e",
+        "a3f4addc-57c2-49c8-b9b2-f9f0a9f0b99f",
+        "87af0490-91ac-48b0-b4bf-b582a06e0f90",
+        "1f94e360-5da7-4a7d-a690-69f49051062d"
     ],
     "tutorial": ""
 }

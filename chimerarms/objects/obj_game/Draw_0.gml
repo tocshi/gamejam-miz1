@@ -25,6 +25,15 @@ for(var i = 0; i < 16; ++i){
 draw_set_halign(fa_left);
 draw_text(xx+6,yy+sprite_get_height(spr_castlehp)/2,"WAVE " + string(global.wave));
 
+// draw wave progress
+xx = room_width/4;
+yy = room_height/20;
+var wavemax = global.basemaxhp*0.5 + (global.basemaxhp*0.25*global.wave);
+draw_set_halign(fa_right);
+draw_set_valign(fa_middle);
+draw_text(xx-10,yy,"WAVE PROGRESS:");
+draw_healthbar(xx,yy,room_width-xx,yy+8,100*(global.waveremaining/wavemax),c_orange,c_black,c_black,1,true,false);
+
 // draw fade for pause
 if(global.pause){
 	if(pausealpha < 0.7){pausealpha+=0.02}
@@ -39,16 +48,21 @@ draw_rectangle(x,y,room_width,room_height,false);
 // exit here if not paused
 if(!global.pause){
 	exit;
-	reset_draw();
 }
 
+reset_draw();
+
+// exit here if next wave data shouldn't be shown
+if(!shownext){
+	exit;
+}
 // determine between-wave text
 var nextwave = "";
 if(global.nextwave == 0){
 	nextwave = "NEW ENEMY!";
 	if(global.wave == 8){
 		nextwave = "???";
-		global.wavedesc = "Something is approaching...";
+		global.wavedesc = "Something big is approaching...";
 	}
 }
 else{
@@ -58,9 +72,7 @@ var weapontext = "";
 if(global.wave == 0){weapontext = "Choose a weapon to fight off the enemies!";}
 else{weapontext = "Choose a weapon to combine into your current weapon!";}
 
-draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_set_valign(fa_top);
 draw_set_font(fnt_defaultbig);
 var xx = room_width/2;
 var yy = room_height/10;

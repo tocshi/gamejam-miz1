@@ -1,0 +1,10 @@
+width = 256;
+height = 256;
+orig_sprite = spr_empty;
+sprite = spr_empty;
+index = 0;
+text = "";
+def_colour = c_black;
+hover_colour = c_gray;
+text_colour = c_white;
+text_font = fnt_default;

@@ -20,4 +20,7 @@ if(global.time % 30 == 0 && global.wave > 0 && global.waveremaining > 0){
 }
 
 // END WAVE
-if(global.waveremaining <= 0 && instance_number(obj_enemy) <= 0){event_perform(ev_other,ev_user0);}
+if(global.waveremaining <= 0 && instance_number(obj_enemy) <= 0){
+	global.pause = true;
+	alarm[1] = 60;
+}

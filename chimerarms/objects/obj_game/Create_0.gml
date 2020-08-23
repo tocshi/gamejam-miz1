@@ -5,14 +5,15 @@ randomize();
 if(!variable_instance_exists(self,"seenTutorial")){seenTutorial = false;}
 global.pause = false;
 pausealpha = 0;
-global.time = 0;
-global.wave = 6;
-global.waveremaining = 1;
 global.basehp = 1000;
 global.basemaxhp = 1000;
+global.time = 0;
+global.wave = 1;
+global.waveremaining = global.basemaxhp*0.5 + (global.basemaxhp*0.25*global.wave);
+shownext = false;
 healing = false;
-global.basex = 0;
-global.basey = 0;
+if(!variable_global_exists("basex")){global.basex = 0;}
+if(!variable_global_exists("basey")){global.basey = 0;}
 global.weapon_list = ds_list_create();
 global.enemy_list = ds_list_create();
 ds_list_add(global.weapon_list,[spr_sword,irandom_range(0,9)]);
@@ -31,6 +32,7 @@ global.player_atkspeed = 1.2;
 global.player_hitmod = 0;
 global.player_piercemod = 1;
 global.player_rangemod = 1;
+global.meleemode = 1;
 global.shotmode = 0;
 
 // enemy modifiers

@@ -1,20 +1,51 @@
 /// @description WAVE END generate next wave stuff
 
 // Ok this data could be stored better but that's an optimization for another time
-global.pause = true;
+
+// generate weapon and weapon buttons
+var buttons = ds_list_create();
+ds_list_add(buttons,random_melee(),random_ranged());
+var roll = 0;
+while(ds_list_size(buttons) < 3){
+	roll = choose(random_melee(),random_ranged());
+	if(ds_list_find_index(buttons,roll) < 0){
+		ds_list_add(buttons,roll);
+	}
+}
+ds_list_shuffle(buttons);
+// create button instance
+for(var i = 0; i < 3; ++i){
+	var xx = (i+1)*(room_width/4);
+	var yy = 3*(room_height/5);
+	with(instance_create_depth(xx,yy,-1,obj_weapon_button)){
+		x -= width/2;
+		y -= height/2;
+		orig_sprite = buttons[| i];
+		sprite = create_weapon_sprite(orig_sprite);
+		index = irandom(sprite_get_number(orig_sprite));
+		// get text
+		event_perform(ev_other,ev_user0);
+	}
+}
+ds_list_destroy(buttons);
+buttons = -1;
+
 if(global.wave % 2 == 0){
 	global.nextwave = 0;
+	
+	// wave 9 summons boss, so we'll skip this
+	if(global.wave == 8){exit;}
 	// generate enemy
 	var enemy = 0;
 	while (enemy <= 0){
 		var roll = 0;
 		if(global.wave < 2){
-			roll =choose(
+			roll=choose(
 			obj_enemy_soldier,
 			obj_enemy_flier);
 		}
 		else{
-			roll =choose(
+			roll=choose(
 			obj_enemy_soldier,
 			obj_enemy_flier,
 			obj_enemy_protector,
@@ -27,6 +58,7 @@ if(global.wave % 2 == 0){
 		}
 	}
 	global.nextenemy = enemy;
+	ds_list_add(global.enemy_list,global.nextenemy);
 	
 	// generate description
 	switch(global.nextenemy){
@@ -71,8 +103,8 @@ else{
 		break;
 			
 		case "speed":
-		global.enemy_speedmod *= 1.3;
-		global.wavedesc = "The enemies move 30% faster!";
+		global.enemy_speedmod *= 1.25;
+		global.wavedesc = "The enemies move 25% faster!";
 		break;
 			
 		case "range":
@@ -81,12 +113,12 @@ else{
 		break;
 			
 		case "hp":
-		global.enemy_atkmod *= 1.3;
+		global.enemy_hpmod *= 1.3;
 		global.wavedesc = "The enemies gain 30% more maximum health!";
 		break;
 			
 		case "size":
-		global.enemy_atkmod *= 0.6;
+		global.enemy_sizemod *= 0.6;
 		global.wavedesc = "The enemies are 40% smaller!";
 		break;
 	}

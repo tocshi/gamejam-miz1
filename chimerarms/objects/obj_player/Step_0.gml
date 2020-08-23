@@ -55,7 +55,7 @@ if(canAttack && !global.pause){
 			image_yscale = 1.5*other.rangemod*dir;
 		}
 	}
-	if((mouse_check_button(mb_right) || keyboard_check(ord("X"))) && shotmode > 0){
+	else if((mouse_check_button(mb_right) || keyboard_check(ord("X"))) && shotmode > 0){
 		atkTimer = room_speed/atkspeed;
 		with(instance_create_layer(x,y,"Attacks",obj_weapon_atk)){
 			atktype = 1;
@@ -152,6 +152,7 @@ else{
 	if(onPlatform <= 0){alarm[0] = 1;}
 }
 
+/*
 if(keyboard_check_pressed(ord("1"))){
 	global.shotmode = 1;
 	room_restart();
@@ -167,6 +168,6 @@ if(keyboard_check_pressed(ord("3"))){
 if(keyboard_check_pressed(ord("4"))){
 	global.shotmode = 4;
 	room_restart();
-}
+}*/
 
 
