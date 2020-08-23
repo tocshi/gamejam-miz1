@@ -18,6 +18,7 @@ if(isMoving){
 }
 else{draw_self();}
 
+reset_draw();
 // draw hp
 var hpleft = hp;
 var xx = 0;

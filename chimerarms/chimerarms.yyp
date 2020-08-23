@@ -175,6 +175,22 @@
             }
         },
         {
+            "Key": "360b004e-4d65-4444-8eb4-155ebd6dbc14",
+            "Value": {
+                "id": "457fed4d-1ca7-409a-a5ad-43185e0ff3bd",
+                "resourcePath": "objects\\obj_enemy_atk\\obj_enemy_atk.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "393f1fc4-b9d8-48f6-ac97-6ac06c416b4c",
+            "Value": {
+                "id": "334d46fa-63d0-459f-9c78-3165b5b5b17f",
+                "resourcePath": "fonts\\fnt_defaultbig\\fnt_defaultbig.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "3a2e0c95-fb15-4c12-be46-5657a6ddffb6",
             "Value": {
                 "id": "96595920-eb11-4f98-b827-3f14862aa721",
@@ -396,6 +412,14 @@
                 "id": "5ce6b84c-71ff-465e-81b1-a658872c5e1f",
                 "resourcePath": "views\\768db2cc-a9e2-496b-bf9d-1c6b1750067a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7a0e3c43-004e-4c95-83cf-03da72a91b9e",
+            "Value": {
+                "id": "4864835e-4dbd-4310-8bc9-f9eba9042f04",
+                "resourcePath": "scripts\\reset_draw\\reset_draw.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -772,7 +796,8 @@
         "9f7deeca-48bd-4c20-9a7d-c8e0491f3e47",
         "588940fd-99a9-4d42-a3cd-2a3c5796eba7",
         "018b5918-021a-4cdd-b679-fd0d90682791",
-        "57059f31-40a6-4a97-9fe2-d4a02759a089"
+        "57059f31-40a6-4a97-9fe2-d4a02759a089",
+        "7a0e3c43-004e-4c95-83cf-03da72a91b9e"
     ],
     "tutorial": ""
 }

@@ -14,6 +14,7 @@ else{draw_self();}
 if(fading){
 	image_alpha-=1/10;
 	if(image_alpha <= 0){
+		global.waveremaining -= atk/global.enemy_atkmod;
 		instance_destroy();
 	}
 }
