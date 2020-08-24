@@ -5,10 +5,10 @@ hp = maxhp;
 atk = 65 * global.enemy_atkmod;
 def = 8 * global.enemy_defmod;
 atkspeed = 0.3;
-range = 250;
+range = 300;
 rangemod = global.enemy_rangemod;
 sizemod = global.enemy_sizemod;
-movespeed = 0.7 * global.enemy_speedmod;
+movespeed = 0.95 * global.enemy_speedmod;
 moveacc = 0.05;
 grav = 0;
 // for attack targeting

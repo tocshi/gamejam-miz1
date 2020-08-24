@@ -10,5 +10,6 @@ sizemod = global.enemy_sizemod;
 movespeed = 0.2;
 moveacc = 0.05;
 grav = 0.5;
+dead = false;
 mask_index = sprite_index;
 image_speed = 0;

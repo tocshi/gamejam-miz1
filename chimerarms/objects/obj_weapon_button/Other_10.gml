@@ -10,11 +10,11 @@ switch(orig_sprite){
 	break;
 			
 	case spr_dagger:
-	text = "Dagger\n+5% damage\nFastest attack speed\nShorter attack range\nGrants melee attack";
+	text = "Dagger\n+3% damage\nFastest attack speed\nShorter attack range\nGrants melee attack";
 	break;
 			
 	case spr_hammer:
-	text = "Hammer\n+6% damage\nSlower attack speed\nIgnores 20% defense\nGrants melee attack";
+	text = "Hammer\n+8% damage\nSlower attack speed\nIgnores 25% defense\nGrants melee attack";
 	break;
 			
 	case spr_axe:

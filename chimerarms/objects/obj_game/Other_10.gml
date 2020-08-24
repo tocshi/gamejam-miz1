@@ -101,7 +101,7 @@ if(global.wave % 2 == 0){
 		break;
 		
 		case obj_enemy_corrupter:
-		global.wavedesc = "Corrupter: a flying enemy with high defense that throws flaming javelins from above";
+		global.wavedesc = "Corrupter: a flying enemy with high defense that throws flaming javelins";
 		break;
 			
 		case obj_enemy_swarmer:
@@ -125,13 +125,13 @@ else{
 		break;
 			
 		case "speed":
-		global.enemy_speedmod *= 1.25;
-		global.wavedesc = "The enemies move 25% faster!";
+		global.enemy_speedmod *= 1.2;
+		global.wavedesc = "The enemies move 20% faster!";
 		break;
 			
 		case "range":
-		global.enemy_rangemod *= 1.5;
-		global.wavedesc = "The ranged enemies gain 50% more range!";
+		global.enemy_rangemod *= 1.4;
+		global.wavedesc = "The ranged enemies gain 40% more range!";
 		break;
 			
 		case "hp":
@@ -140,8 +140,8 @@ else{
 		break;
 			
 		case "size":
-		global.enemy_sizemod *= 0.8;
-		global.wavedesc = "The enemies are 20% smaller!";
+		global.enemy_sizemod *= 0.75;
+		global.wavedesc = "The enemies are 25% smaller!";
 		break;
 	}
 }

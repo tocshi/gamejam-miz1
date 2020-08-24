@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "311d3790-2200-41fb-93a8-2c64072e7219",
+            "Value": {
+                "id": "9df36cfc-3bf7-491d-a52b-15e8b2edbcd5",
+                "resourcePath": "sounds\\snd_bossdead\\snd_bossdead.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "32dfeb8d-1403-4af7-889c-19a37c020f7b",
             "Value": {
                 "id": "91b50f24-3a00-4712-902e-a6ac042a891b",

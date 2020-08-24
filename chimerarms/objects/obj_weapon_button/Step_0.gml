@@ -17,22 +17,22 @@ if(mouse_check_button_pressed(mb_left)){
 			break;
 			
 			case spr_dagger:
-			global.player_atkmod *= 1.05;
-			global.player_atkspeed = (global.player_atkspeed+1.2)/2;
+			global.player_atkmod *= 1.03;
+			global.player_atkspeed = (global.player_atkspeed+2)/2;
 			global.player_rangemod *= 1;
 			global.meleemode = 1;
 			break;
 			
 			case spr_hammer:
-			global.player_atkmod *= 1.06;
-			global.player_atkspeed = (global.player_atkspeed+0.8)/2;
-			global.player_piercemod *= 0.8;
+			global.player_atkmod *= 1.08;
+			global.player_atkspeed = (global.player_atkspeed+0.85)/2;
+			global.player_piercemod *= 0.75;
 			global.meleemode = 1;
 			break;
 			
 			case spr_axe:
 			global.player_atkmod *= 1.06;
-			global.player_atkspeed = (global.player_atkspeed+0.75)/2;
+			global.player_atkspeed = (global.player_atkspeed+0.8)/2;
 			global.player_hitmod++;
 			global.meleemode = 1;
 			break;
@@ -59,7 +59,7 @@ if(mouse_check_button_pressed(mb_left)){
 			
 			case spr_launcher:
 			global.player_atkmod *= 1.08;
-			global.player_atkspeed = (global.player_atkspeed+0.65)/2;
+			global.player_atkspeed = (global.player_atkspeed+0.7)/2;
 			global.player_hitmod++;
 			global.shotmode = 4;
 			break;

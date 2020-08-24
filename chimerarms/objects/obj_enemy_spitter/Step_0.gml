@@ -19,12 +19,8 @@ if(x-96 < range*rangemod){
 	}
 }
 else if(point_distance(x,y,obj_player.x,obj_player.y) < range*rangemod){
-	canMove = false;
-	isMoving = false;
 	if(alarm[2] <= 0 && atkTimer <= 0){
 		alarm[2] = 30;
 		instance_create_layer(x,y,"Attacks",obj_exclamation);	
 	}
-}else{
-	canMove = true;
 }

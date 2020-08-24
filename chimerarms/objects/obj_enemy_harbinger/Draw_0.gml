@@ -10,6 +10,10 @@ else{draw_self();}
 
 // other effects
 if(fading){
+	if(!dead){
+		audio_play_sound(snd_bossdead,69,0);
+		dead = true;
+	}
 	isMoving = false;
 	hspeed = 0;
 	image_alpha-=1/300;
