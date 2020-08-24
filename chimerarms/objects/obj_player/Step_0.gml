@@ -49,7 +49,7 @@ if(canAttack && !global.pause){
 			hitmod = other.hitmod;
 			piercemod = other.piercemod;
 			duration = (room_speed/atkspeed)/3;
-			dir = other.facing;
+			dir = sign(mouse_x - other.x);
 			image_angle = 90 + (10 * dir);
 			image_xscale = 1.5*other.rangemod;
 			image_yscale = 1.5*other.rangemod*dir;

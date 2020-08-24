@@ -1,6 +1,8 @@
 // resolve time
 global.time++;
 
+if(room == rm_title){exit;}
+
 if(healing){
 	if(global.basehp < global.basemaxhp){
 		global.basehp += global.basemaxhp/60;
@@ -14,9 +16,16 @@ if(healing){
 // anything after this does not execute if the game needs to pause
 if(global.pause){exit;}
 
-// resolve points
+// resolve spawns
 if(global.time % 30 == 0 && global.wave > 0 && global.waveremaining > 0){
 	spawn_enemy();
+}
+
+// check defeat
+if(global.basehp <= 0){
+	defeat = true;
+	global.pause = true;
+	with(obj_enemy){instance_destroy();}
 }
 
 // END WAVE

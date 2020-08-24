@@ -10,7 +10,7 @@
     "option_windows_copyright_info": "(c) 2020 tocshi",
     "option_windows_description_info": "Defend your castle from an onslaught of different enemies, by mashing the weapons you find into your own!",
     "option_windows_disable_sandbox": false,
-    "option_windows_display_cursor": true,
+    "option_windows_display_cursor": false,
     "option_windows_display_name": "Chimerams by tocshi",
     "option_windows_enable_steam": false,
     "option_windows_executable_name": "${project_name}",

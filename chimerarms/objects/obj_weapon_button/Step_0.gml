@@ -1,6 +1,6 @@
 // interact behaviour
 if(mouse_check_button_pressed(mb_left)){
-	if(mouse_x >= x && mouse_x <= x+width && mouse_y >= y && mouse_y <= y+height){
+	if(mouse_x >= x && mouse_x <= x+width && mouse_y >= y && mouse_y <= y+height && clickable){
 		// switch based on weapon sprite
 		switch(orig_sprite){
 			case spr_sword:
@@ -66,15 +66,27 @@ if(mouse_check_button_pressed(mb_left)){
 			
 			default:
 		}
-		// signal wave start and add stats to player
-		with(obj_game){
-			event_perform(ev_other,ev_user1);
-		}
+		// add stats to player
 		ds_list_add(global.weapon_list,[orig_sprite,index]);
 		with(obj_player){
 			event_perform(ev_other,ev_user0);
 		}
-		
-		with(obj_weapon_button){instance_destroy();}
+		clicked = true;
+		text = "";
+		alarm[0] = 60;
 	}
 }
+
+if(clicked){
+	x = lerp(x,room_width/2-width/2,0.2);
+	//y = lerp(y,room_height/2-height/2,0.2);
+	with(obj_weapon_button){
+		clickable = false;
+		if(id != other.id){
+			vspeed += 0.2;
+		}	
+	}
+}
+
+// advance to next wave
+if(newWeapon && mouse_check_button_pressed(mb_left)){alarm[1] = 1;}

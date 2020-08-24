@@ -7,7 +7,7 @@ state = 0;
 
 width = 0;
 height = 0;
-def_colour = c_black;
+def_colour = make_color_rgb(71,45,60);
 hover_colour = c_gray;
 text_colour = c_white;
 text_font = fnt_default;

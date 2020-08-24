@@ -28,3 +28,8 @@ if(mouse_check_button_pressed(mb_left)){
 		}
 	}
 }
+
+// janky but this makes cool particles
+if(global.time % 20 == 0){
+	instance_create_depth(irandom(room_width),-100,1,obj_falling_weapon);
+}

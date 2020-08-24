@@ -1,0 +1,10 @@
+event_inherited();
+origX = x;
+dir = 1;
+range = 0;;
+grav = 0.3;
+vspeed = -5;
+movespeed = 2;
+moveacc = 0.5;
+image_xscale = 2;
+image_yscale = 2;

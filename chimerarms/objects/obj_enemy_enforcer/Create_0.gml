@@ -2,7 +2,7 @@ event_inherited();
 // enemy stats
 maxhp = 170 * global.enemy_hpmod;
 hp = maxhp;
-atk = 65 * global.enemy_atkmod;
+atk = 90 * global.enemy_atkmod;
 def = 40 * global.enemy_defmod;
 atkspeed = 1;
 rangemod = global.enemy_rangemod;

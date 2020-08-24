@@ -8,3 +8,6 @@ def_colour = c_black;
 hover_colour = c_gray;
 text_colour = c_white;
 text_font = fnt_default;
+clickable = true;
+clicked = false;
+newWeapon = false;

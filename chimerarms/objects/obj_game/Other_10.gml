@@ -42,15 +42,21 @@ if(global.wave % 2 == 0){
 		if(global.wave < 2){
 			roll=choose(
 			obj_enemy_soldier,
-			obj_enemy_flier);
+			obj_enemy_flier,
+			obj_enemy_caster,
+			obj_enemy_spitter);
 		}
 		else{
 			roll=choose(
 			obj_enemy_soldier,
 			obj_enemy_flier,
+			obj_enemy_caster,
+			obj_enemy_spitter,
 			obj_enemy_protector,
+			obj_enemy_boulder,
 			obj_enemy_grouper,
 			obj_enemy_enforcer,
+			obj_enemy_corrupter,
 			obj_enemy_swarmer);
 		}
 		if(ds_list_find_index(global.enemy_list,roll) < 0){
@@ -67,11 +73,23 @@ if(global.wave % 2 == 0){
 		break;
 			
 		case obj_enemy_flier:
-		global.wavedesc = "Flier: a standard enemy that flies towards the castle";
+		global.wavedesc = "Flier: a flying enemy that flies towards the castle";
+		break;
+		
+		case obj_enemy_caster:
+		global.wavedesc = "Caster: a standard enemy that can shoot ranged magic bolts";
+		break;
+			
+		case obj_enemy_spitter:
+		global.wavedesc = "Spitter: a flying enemy that spits ranged corrosive liquids";
 		break;
 			
 		case obj_enemy_protector:
 		global.wavedesc = "Protector: a grounded melee enemy with high defense";
+		break;
+		
+		case obj_enemy_boulder:
+		global.wavedesc = "Boulder: a grounded enemy with high defense that throws rolling rocks";
 		break;
 			
 		case obj_enemy_grouper:
@@ -80,6 +98,10 @@ if(global.wave % 2 == 0){
 			
 		case obj_enemy_enforcer:
 		global.wavedesc = "Enforcer: a flying melee enemy with high defense";
+		break;
+		
+		case obj_enemy_corrupter:
+		global.wavedesc = "Corrupter: a flying enemy with high defense that throws flaming javelins from above";
 		break;
 			
 		case obj_enemy_swarmer:
@@ -113,13 +135,13 @@ else{
 		break;
 			
 		case "hp":
-		global.enemy_hpmod *= 1.3;
-		global.wavedesc = "The enemies gain 30% more maximum health!";
+		global.enemy_hpmod *= 1.2;
+		global.wavedesc = "The enemies gain 20% more maximum health!";
 		break;
 			
 		case "size":
-		global.enemy_sizemod *= 0.6;
-		global.wavedesc = "The enemies are 40% smaller!";
+		global.enemy_sizemod *= 0.8;
+		global.wavedesc = "The enemies are 20% smaller!";
 		break;
 	}
 }
