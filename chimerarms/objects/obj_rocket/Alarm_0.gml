@@ -1,5 +1,5 @@
 ///@description eXPLOSION
-
+audio_play_sound(snd_explode,3,0);
 // hurt yourself
 if(point_distance(x,y,obj_player.x,obj_player.y) < 64){
 	with(obj_player){

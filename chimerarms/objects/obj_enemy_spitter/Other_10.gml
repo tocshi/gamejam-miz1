@@ -1,7 +1,7 @@
 /// @description perform ranged attack
 if(fading){exit;}
 atkTimer = room_speed/atkspeed;
-
+audio_play_sound(snd_magic,1,0);
 with(instance_create_layer(x,y,"Attacks",obj_enemy_bolt)){
 	atk = other.atk*0.5;
 	range = other.range * other.rangemod;

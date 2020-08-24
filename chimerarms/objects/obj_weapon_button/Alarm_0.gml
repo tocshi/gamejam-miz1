@@ -1,6 +1,7 @@
 /// @description show new weapon
 clicked = false;
 newWeapon = true;
+audio_play_sound(snd_make,1,0);
 // print different text if it's wave 0
 if(global.wave == 0){
 	text = "You have chosen to use the " + 

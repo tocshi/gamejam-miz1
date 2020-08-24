@@ -91,5 +91,4 @@ for(var i = 0; i < ds_list_size(global.weapon_list); ++i){
 }
 
 name = prefix + base + suffix;
-show_debug_message(name)//temp
 return name;

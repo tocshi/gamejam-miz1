@@ -22,7 +22,10 @@ if(canMove){
 		}
 	}
 	if((keyboard_check(ord("W")) || keyboard_check(vk_space) || keyboard_check(vk_up)) && canJump){
-		if(alarm[0] <= 0){alarm[0] = 10;}
+		if(alarm[0] <= 0){
+			alarm[0] = 10;
+			audio_play_sound(snd_jump,0,0);
+		}
 		vspeed = -8;
 	}
 }
@@ -43,6 +46,7 @@ if(isMoving){
 if(canAttack && !global.pause){
 	if((mouse_check_button(mb_left) || keyboard_check(ord("Z"))) && meleemode > 0){
 		atkTimer = room_speed/atkspeed;
+		audio_play_sound(snd_swing,3,0);
 		with(instance_create_layer(x,y,"Attacks",obj_weapon_atk)){
 			atk = other.atk;
 			atkspeed = other.atkspeed;
@@ -71,6 +75,7 @@ if(canAttack && !global.pause){
 		switch(shotmode){
 			// bow and arrow
 			case 1:
+			audio_play_sound(snd_arrow,1,0);
 			with(instance_create_layer(x,y,"Attacks",obj_arrow)){
 				atk = other.atk*0.7;
 				hitmod = other.hitmod;
@@ -83,6 +88,7 @@ if(canAttack && !global.pause){
 			break;
 			// staff
 			case 2:
+			audio_play_sound(snd_magic,1,0);
 			with(instance_create_layer(x,y,"Attacks",obj_bolt)){
 				atk = other.atk*0.7;
 				hitmod = other.hitmod;
@@ -101,6 +107,7 @@ if(canAttack && !global.pause){
 			break;
 			// launcher
 			case 4:
+			audio_play_sound(snd_rocket,1,0);
 			with(instance_create_layer(x,y,"Attacks",obj_rocket)){
 				atk = other.atk*0.7;
 				hitmod = other.hitmod;

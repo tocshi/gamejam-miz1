@@ -6,6 +6,8 @@ if(mouse_check_button_pressed(mb_left)){
 			// goto room
 			case 0:
 				room_goto(data[0]);
+				audio_stop_sound(bgm_loop);
+				audio_play_sound(bgm_battle,99,1);
 				break;
 			// switch keybind
 			case 1:

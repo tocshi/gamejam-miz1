@@ -37,3 +37,4 @@ with(instance_create_layer(x,y,"Attacks",obj_shotline)){
 	destX = xx;
 	destY = yy;
 }
+audio_play_sound(snd_gun,1,0);
